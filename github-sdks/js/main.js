@@ -1,10 +1,10 @@
-import { Octokit, App } from "ocktokit"
+import { Octokit, App } from "octokit"
 
 const ocktokit = new Octokit({
     auth: process.env.GH_TOKEN
 })
 
-await ocktokit.request('POST /repos/{owner}/{repo}/git/refs', {
+ocktokit.request('POST /repos/{owner}/{repo}/git/refs', {
     owner: 'aprendizsw',
     repo: 'Github-Examples2',
     ref: 'refs/heads/sdksjs',
